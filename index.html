@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/favicon@0.25x.png" type="image/x-icon">
+    <title>Point Distance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>Point Distance Calculator</header>
+    <hr>
+    <form action="" id="submisson__form">
+        <div id="submission__div">
+            <div id="file__input__div">
+                <label for="txt__input">Upload XY Coordinates from Fiji: </label>
+                <input type="file" name="txt__input" id="file__input">
+            </div>
+            
+            <div id="ratio__input__div">
+                <label for="ratio__input">1 unit = </label>
+                <input type="number" name="ratio__input" id="ratio__input" min="0" placeholder="I.E: 100"> Pixels
+            </div>
+            <button type="button" onclick="getFile()" class="button-30" id="submit__button">Calculate</button>
+        </div>
+        
+    </form>
+    <p id="message__p"></p>
+    <div id="table__div">
+        
+    </div>
+    
+
+</body>
+</html>
