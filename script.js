@@ -5,13 +5,13 @@ let yCoordsArray = [];
 let distancesArray = [];
 let resultsTable;
 let averageDistance;
-let submitButton = document.getElementById("submit__button");
-let messageP = document.getElementById('message__p');
+let submitButton = document.getElementById("submit-button");
+let messageP = document.getElementById('message-p');
 
 //Reads the uploaded file, converts it to text, and calls processData function.
 //Also sets the conversion factor.
 function getFile() {
-    let file = document.getElementById('file__input');
+    let file = document.getElementById('file-input');
     if (file.files.length) {
         let reader = new FileReader();
         reader.onload = function(e) {
@@ -21,9 +21,9 @@ function getFile() {
                 yCoordsArray = [];
                 distancesArray = [];
             }
-            let tableDiv = document.getElementById('table__div');
+            let tableDiv = document.getElementById('table-div');
             resultsTable = document.createElement('table');
-            resultsTable.classList.add('results__table');
+            resultsTable.classList.add('results-table');
             tableDiv.append(resultsTable);
             let th1 = document.createElement('th');
             th1.innerText = 'Obj X -> Obj Y';
@@ -31,14 +31,14 @@ function getFile() {
             th2.innerText = 'Distance in Units';
             resultsTable.append(th1, th2);
 
-            convFactor = document.getElementById('ratio__input').value;
+            convFactor = document.getElementById('ratio-input').value;
             convFactor = Number(convFactor);
             fileText = e.target.result;
             processData(fileText);
             let fileName = file.value.split('\\').pop();
             messageP.innerText = `New Distances Calculated for ${fileName}`;
             messageP.removeAttribute('class');
-            messageP.classList.add('success__message');
+            messageP.classList.add('success-message');
             file.value = '';
         }
         reader.readAsBinaryString(file.files[0]);
@@ -47,7 +47,7 @@ function getFile() {
     else {
         messageP.innerText = 'Error: No file selected';
         messageP.removeAttribute('class');
-        messageP.classList.add('error__message');
+        messageP.classList.add('error-message');
     }
 }
 
@@ -70,7 +70,7 @@ function processData(data) {
         console.log('Error: Coordinate pair(s) missing a value')
         messageP.innerText = 'Error: Coordinate pair(s) missing a value';
         messageP.removeAttribute('class');
-        messageP.classList.add('error__message');
+        messageP.classList.add('error-message');
     }
     objToObj(xCoordsArray, yCoordsArray);
 }
