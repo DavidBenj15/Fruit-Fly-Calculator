@@ -69,8 +69,8 @@ hr {
     border: 1px solid black;
 }
 
+/*"button-30" Code modified from https://getcssscan.com/css-buttons-examples*/
 .button-30 {
-    /*Code modified from https://getcssscan.com/css-buttons-examples*/
     margin: 15px;
     justify-self: center;
     width: 100px;
