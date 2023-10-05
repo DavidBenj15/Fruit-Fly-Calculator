@@ -25,12 +25,12 @@ hr {
     padding: 0;
 }
 
-.results__table {
+.results-table {
     font-size: 20px;
 
 }
 
-#submission__div {
+#submission-div {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 600px;
@@ -42,7 +42,7 @@ hr {
 }
 
 
-#file__input::-webkit-file-upload-button {
+#file-input::-webkit-file-upload-button {
     width: 100px;
     font-family: "JetBrains Mono", monospace;
     background-color: white;
@@ -51,25 +51,26 @@ hr {
     transition: .3s;
 }
 
-#file__input::-webkit-file-upload-button:hover {
+#file-input::-webkit-file-upload-button:hover {
     background-color: #135EF2;
     color: white;
 }
 
-#file__input__div {
+#file-input-div {
     padding: 10px;
     grid-row: 1 / 2;
     border: 1px solid black;
     border-bottom: 0;
 }
 
-#ratio__input__div {
+#ratio-input-div {
     padding: 10px;
     grid-row: 2 / 3;
     border: 1px solid black;
 }
 
 .button-30 {
+    /*Code modified from https://getcssscan.com/css-buttons-examples*/
     margin: 15px;
     justify-self: center;
     width: 100px;
@@ -130,25 +131,25 @@ th {
     background-color: lightgray;
 }
 
-#table__div {
+#table-div {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
 }
 
-#message__p {
+#message-p {
     display: flex;
     justify-content: center;
     margin: 30px 0px 15px 0px;
 }
 
-.success__message {
+.success-message {
     color: black;
     opacity: 35%;
     transition: opacity 3s;
 }
 
-.error__message {
+.error-message {
     color: red;
     opacity: 35%;
     transition: opacity 3s;
