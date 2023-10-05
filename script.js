@@ -8,11 +8,16 @@ let messageP = document.getElementById('message-p');
 /*TODO: if "Error: no file..." message is already displayed,
  *and there is a successful upload, remove the message.
  */
-//Reads the uploaded file, converts it to text, and calls processData function.
-//Also sets the conversion factor.
+
+/**
+ * Reads the uploaded file
+ * Calls the createResultsTable() function
+ * Calls the processData() function
+ * Calls the showMessage() function based on input success.
+ * 
+ */
 function getFile() {
     const fileInput = document.getElementById('file-input');
-    const ratioInput = parseFloat(document.getElementById('ratio-input').value);
     const tableDiv = document.getElementById('table-div');
 
     if (fileInput.files.length) {
@@ -22,7 +27,7 @@ function getFile() {
             if (resultsTable) {
                 resultsTable.remove();
                 clearArrays();
-                //TODO: remove "Error: no..." message within this functino.
+                //TODO: remove "Error: no..." message within this function.
             }
 
             resultsTable = createResultsTable();
@@ -35,7 +40,7 @@ function getFile() {
             showMessage("none", fileName);
             fileInput.value = '';
         }
-
+        
         reader.readAsText(fileInput.files[0]);
     } else {
         showMessage("no-file")
