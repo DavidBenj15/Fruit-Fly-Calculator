@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>Fruit Fly Calculator</header>
     <hr>
+
     <form action="" id="submisson-form">
+        
         <div id="submission-div">
+
             <div id="file-input-div">
                 <label for="txt-input">Upload XY Coordinates from Fiji: </label>
                 <input type="file" name="txt-input" id="file-input">
@@ -23,15 +27,15 @@
                 <label for="ratio-input">1 unit = </label>
                 <input type="number" name="ratio-input" id="ratio-input" min="0" placeholder="I.E: 100"> Pixels
             </div>
-            <button type="button" onclick="getFile()" class="button-30" id="submit-button">Calculate</button>
-        </div>
-        
-    </form>
-    <p id="message-p"></p>
-    <div id="table-div">
-        
-    </div>
-    
 
+            <button type="button" onclick="getFile()" class="button-30" id="submit-button">Calculate</button>
+
+        </div>
+
+    </form>
+
+    <p id="message-p"></p>
+    <div id="table-div"></div>
+    
 </body>
 </html>
